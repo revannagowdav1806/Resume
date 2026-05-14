@@ -1,0 +1,394 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeevitha Portfolio Resume</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at top left,#7c3aed55,transparent 30%),
+    radial-gradient(circle at bottom right,#06b6d455,transparent 30%);
+    z-index:-1;
+    animation:bgMove 8s infinite alternate;
+}
+
+@keyframes bgMove{
+    0%{transform:scale(1);}
+    100%{transform:scale(1.1);}
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,0.8);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h1{
+    color:#38bdf8;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    animation:fadeIn 2s ease;
+}
+
+.hero h2{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero h2 span{
+    color:#38bdf8;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    background:#38bdf8;
+    color:#0f172a;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px #38bdf8;
+}
+
+/* Sections */
+
+section{
+    padding:100px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+/* Cards */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(8px);
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.skill{
+    padding:12px 25px;
+    background:#1e293b;
+    border-radius:30px;
+    transition:0.4s;
+}
+
+.skill:hover{
+    background:#38bdf8;
+    color:#0f172a;
+    transform:scale(1.1);
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+    <h1>Jeevitha</h1>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero" id="about">
+
+<div class="hero-content">
+
+    <h2>Hello, I'm <span>Jeevitha</span></h2>
+
+    <p>
+        Motivated and hardworking BCA student seeking an opportunity to apply my skills and gain practical experience while contributing to the organization.
+    </p>
+
+    <a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+</section>
+
+<!-- Education -->
+
+<section id="education">
+
+<h2 class="title">Education</h2>
+
+<div class="card-container">
+
+<div class="card">
+    <h3>BCA - 1st Year</h3>
+    <p><b>College:</b> Lowry Adventist College</p>
+    <p><b>Year:</b> 2025</p>
+    <p><b>CGPA:</b> 7.8</p>
+</div>
+
+<div class="card">
+    <h3>PUC / 12th</h3>
+    <p><b>College:</b> Marvel PU College</p>
+    <p><b>Percentage:</b> 74%</p>
+</div>
+
+<div class="card">
+    <h3>SSLC / 10th</h3>
+    <p><b>School:</b> Sir. M. V High School</p>
+    <p><b>Percentage:</b> 56%</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">MS Excel</div>
+<div class="skill">MS Word</div>
+<div class="skill">PowerPoint</div>
+<div class="skill">C Programming</div>
+<div class="skill">R Programming</div>
+<div class="skill">Communication</div>
+<div class="skill">Teamwork</div>
+<div class="skill">Time Management</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="card-container">
+
+<div class="card">
+    <h3>Resume Creation</h3>
+    <p>
+        Designed and developed an attractive scrolling resume website using HTML and CSS with animations and dark aesthetic theme.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Interests -->
+
+<section>
+
+<h2 class="title">Interests & Hobbies</h2>
+
+<div class="skills">
+
+<div class="skill">Reading</div>
+<div class="skill">Sports</div>
+<div class="skill">Coding</div>
+<div class="skill">Music</div>
+
+</div>
+
+</section>
+
+<!-- Languages -->
+
+<section>
+
+<h2 class="title">Languages Known</h2>
+
+<div class="skills">
+
+<div class="skill">English</div>
+<div class="skill">Kannada</div>
+<div class="skill">Hindi</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="title">Contact Details</h2>
+
+<div class="card-container">
+
+<div class="card">
+    <h3>Phone</h3>
+    <p>+91 8105434150</p>
+</div>
+
+<div class="card">
+    <h3>Email</h3>
+    <p>jeevithashivanna966@email.com</p>
+</div>
+
+<div class="card">
+    <h3>Address</h3>
+    <p>B Nagasandra 8th Cross, Yemlur Post-37</p>
+</div>
+
+<div class="card">
+    <h3>Date of Birth</h3>
+    <p>04-06-2007</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    © 2026 Jeevitha | Portfolio Resume Website
+</footer>
+
+</body>
+</html>
